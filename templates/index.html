@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Index </title>
+    <link rel="stylesheet" href="../static/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/mystyle.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <h1 class="title1">Game Zone</h1>
+        </div>        
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 entry2">
+                <h3>Attempt's Left</h3>
+                <h1 id="centerme"> {{result['a']}}  </h1>
+            </div>
+
+            <div class="col-md-6">
+                <form action="/" method="post">
+    
+                    <div class="entry">
+                        <label for="usin">Enter Your Guess Number  </label><br>
+                        <input type="number" name="uguess" id="usin"  placeholder="Your Guess !" id="myinput"  id="move" > 
+                        <input type="submit" value="Submit your Choice" class="btn btn-success btn-lg" id="btn1">
+                    </div>
+    
+                </form> 
+            </div>
+
+            <div class="col-md-2 entry2">
+                <h3> Clues </h3>
+                <h3> 20+  Faraway </h3>
+                <h3> 10-20 On Slot  </h3>
+                <h3> 5-10 Near  </h3>
+                <h3> 2-5 Almost  </h3>
+                <h3> 0-2 Approx </h3>
+
+                
+            </div>
+
+            
+        </div>
+
+       
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+           
+            <div class="entry1">
+                <h1> {{result['gres']}} </h1>
+                <h3> {{result['tip']}} </h3>
+                <!--
+                    <h3>computer entry {{result['c']}} </h3>
+                -->
+                
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="offset-md-3 col-md-3">
+            <a href=""  class="btn btn-success btn-lg" id="btn1"> Play again </a>
+        </div>
+        <div class="col-md-3">
+            <a href=""  class="btn btn-danger btn-lg" id="btn1"> Exit Game </a>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

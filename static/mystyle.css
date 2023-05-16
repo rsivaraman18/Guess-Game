@@ -1,0 +1,95 @@
+body{
+    background-image:url(pic3.jpg);
+    background-size:cover;
+    
+}
+
+.title1{
+    color: rgb(226, 21, 21);
+    color: rgb(226, 89, 21);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 100px;
+    
+}
+
+
+
+
+
+.entry{
+    font-size: 40px;
+    font-weight:900;
+    margin: 40px;   
+    color: rgb(235, 10, 141);
+    background-color: rgb(241, 241, 239);
+    box-shadow: 10px 10px 5px black;
+    padding-left: 55px;  
+    padding-right: 75px;  
+    border-radius: 13px;
+    
+}
+
+
+.entry1{
+    font-size: 100px;
+    font-weight:900;
+    font-style: italic;
+    margin: 15px;   
+    color: rgb(10, 104, 235);
+    background-color: rgb(241, 241, 239);
+    box-shadow: 10px 10px 5px black;
+    padding-left: 55px;  
+    padding-right: 15px;  
+    border-radius: 10px;
+    
+    
+}
+
+
+.entry2{
+    font-size: 100px;
+    font-weight:900;
+    font-style: italic;
+    margin: 15px;   
+    color: rgb(10, 104, 235);
+    background-color: rgb(241, 241, 239);
+    box-shadow: 10px 10px 5px black;
+    padding-left: 30px;  
+    padding-right: 10px;  
+    border-radius: 10px;
+    text-align: justify;
+    
+    
+}
+
+
+#centerme{
+    font-size: larger;
+    margin-left:40px;
+
+}
+
+
+
+
+#btn1{
+    margin-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: fit-content;
+    font-size: 30px;
+}
+
+
+
+
+
+#down{
+    margin-bottom: 100px;     
+     
+}
+
+.ans{
+    color: coral;
+}

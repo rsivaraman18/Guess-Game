@@ -23,12 +23,14 @@ def gamepage():
     session.pop('cguess', None)  
     session.pop('attempt', None)
 
-    cguess = random.randint(1,100)
+    cguess = random.randint(1,50)
     session['cguess'] = cguess
     session['attempt'] = 5
+    uall = []
+    session['uall'] = uall
     gres=''
     tip= "Are you ready to Play"
-    res = {'tip':tip, 'c':'','a':5,'gres':gres}
+    res = {'tip':tip, 'c':'','a':5,'gres':gres,'uall':uall,'d':''}
     return render_template('index.html',result=res)
 
     
@@ -37,6 +39,10 @@ def gamepage():
 
 def cal(u,c,myat):
     myat = myat -1
+
+    uall = session['uall']  
+    uall.append(u)
+    session['uall'] = uall
 
     session['attempt'] = myat
     u = int(u)
@@ -52,37 +58,37 @@ def cal(u,c,myat):
     elif (u>=c) & (d>20):
         tip= "Sry! guess is bigger & far away"
 
-    elif (u>=c) & (d>10 & d<20):
+    elif (u>=c) & (d>11 & d<=20):
         tip= "Sry! guess is bigger & onslot"
        
-    elif (u>=c) & (d>5  & d<10 ):
+    elif (u>=c) & (d>5  & d<=10 ):
         tip= "Sry! guess is bigger & Near"
     
-    elif (u>=c) & (d>2 & d<5):
+    elif (u>=c) & (d>2 & d<=5):
         tip= "Sry! guess is bigger & Almost there"
     
-    elif (u>=c) & (d>0 & d<2):
+    elif (u>=c) & (d>0 & d<=2):
         tip= "Sry! guess is bigger & approx right "
 
     
     elif (c>=u) & (d>20):
         tip= "Sry! guess is smaller & far away"
 
-    elif (c>=u) & (d>10 & d<20):
+    elif (c>=u) & (d>10 & d<=20):
         tip= "Sry! guess is smaller &  on slot"
     
-    elif (c>=u) & (d>5  & d<10 ):
+    elif (c>=u) & (d>5  & d<=10 ):
         tip= "Sry! guess is bigger & Near"
        
-    elif (c>=u) & (d>2 & d<5):
+    elif (c>=u) & (d>2 & d<=5):
         tip= "Sry! guess is bigger & Almost there"
 
-    elif (c>=u) & (d>0 & d<2):
+    elif (c>=u) & (d>0 & d<=2):
        tip= "Sry! guess is bigger & approxy "
     
     
 
-    res = {'tip':tip, 'c':c,'a':myat,'gres':gres}
+    res = {'tip':tip, 'c':c,'a':myat,'gres':gres,'uall':uall,'d':d}
     return res
 
 
@@ -90,7 +96,7 @@ def cal1():
     tip= "You Lost the Game"
     gres = "Game over"
     c = ''
-    myat = 0
+    myat = '-'
 
     res = {'tip':tip, 'c':c,'a':myat,'gres':gres}
     return res

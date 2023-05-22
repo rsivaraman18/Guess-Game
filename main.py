@@ -108,7 +108,12 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 
-
+'''
+1.session.pop('key',None) --> Changes the value to Zero for the given Key.
+2.session.clear()          --> Clears all data stored in Session
+3.To get data from session --> data = session['key']
+4.To send data to session   --> session['key'] = data
+'''
 
 
 

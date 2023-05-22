@@ -34,8 +34,8 @@
 
             <div class="col-md-2 entry2">
                 <h3> Clues </h3>
-                <h3> 20+  Faraway </h3>
-                <h3> 11-20 On Slot  </h3>
+                <h3> 20+  Faraway  </h3>
+                <h3> 11-20 On Slot </h3>
                 <h3> 6-10 Near  </h3>
                 <h3> 3-5 Almost  </h3>
                 <h3> 0-2 Approx </h3>          
@@ -43,8 +43,6 @@
             
             <div class="col-md-1 entry2">
                 <h3> Entry </h3>
-                <!--<h4> {{result['uall']}} </h4>  -->
-                
                 {% for i in result['uall']  %} 
                     <h4>{{ i }}</h4>
                 {% endfor %}
@@ -59,12 +57,8 @@
             <div class="entry1">
                 <h1> {{result['gres']}} </h1>
                 <h3> {{result['tip']}} </h3>
-                <!--
-                <h3>computer entry {{result['c']}} </h3>
-                <h3>Difference {{result['d']}} </h3>
-                -->             
+                <!-- <h3>Comp {{result['c']}} & Diff {{result['d']}} </h3>       
             </div>
-
         </div>
     </div>
 
